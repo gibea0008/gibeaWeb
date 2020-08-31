@@ -4,9 +4,40 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Gibea</title>
+    <script>
+        var y=0;
+        var x=0;
+         function divchange()
+         {
+             var divtag=document.getElementById("div1");
+             var bgcolor=("green","lightblue","gray");
+             var textcolor=("blue","green","yellow");
+             divtag.style.backgroundColor=bgcolor(y);
+             divtag.style.color=textcolor(x);
+             y=(y+1)%bgcolor.length;
+             x=(x+1)%textcolor.length;
+         }
+         setInterval(divchange,2000);
+     </script>
+</head>
+<head>
+
+<style>
+    div1
+    {
+        border:2px solid red;
+        background-color: green;
+        height:250px;
+        width:300px;
+    }
+</style>
 </head>
 <body>
+ <center> 
+<div id="div1">
     <h1 style="background-color:crimson;">Hello World!</h1>
-    <i style="font-size:50px">Im'Gibea Bagadiong.</i>
+    <i style="font-size:30px">Im'Gibea Bagadiong.</i>
+</div>  
+</center> 
 </body>
 </html>
